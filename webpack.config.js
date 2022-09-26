@@ -16,10 +16,6 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
-    alias: {
-      pages: path.resolve(__dirname, "src/pages/"),
-      components: path.resolve(__dirname, "src/components"),
-    },
   },
   module: {
     rules: [{ test: /\.tsx?$/, loader: "ts-loader" }],
