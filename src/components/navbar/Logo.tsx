@@ -2,12 +2,20 @@ import styled from "styled-components";
 
 function Logo() {
   return <LogoWrapper>
-    <img src="https://gamercade.io/img/logo-trans.png" />
-    <h1>Gamercade</h1>
+    <LogoImage src="https://gamercade.io/img/logo-trans.png" />
+    <LogoTitle>Gamercade</LogoTitle>
   </LogoWrapper>
 }
 export default Logo;
 
 const LogoWrapper = styled.div`
-  
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`
+const LogoImage = styled.img`
+  width: 31px;
+`
+const LogoTitle = styled.h1`
+  margin: 0;
 `

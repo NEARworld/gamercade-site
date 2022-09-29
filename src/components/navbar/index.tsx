@@ -11,4 +11,7 @@ function Navbar() {
 export default Navbar;
 
 const NavbarWrapper = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 `
