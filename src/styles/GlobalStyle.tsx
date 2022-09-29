@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Ubuntu', sans-serif;
+    margin: 0;
   }
 `
 export default GlobalStyle;
