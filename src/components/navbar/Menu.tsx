@@ -14,6 +14,7 @@ function Menu() {
 
 export default Menu;
 const MenuWrapper = styled.div`
+  margin-right: 20px;
 `
 const MenuList = styled.ul`
   display: flex;

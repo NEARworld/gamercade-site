@@ -14,6 +14,7 @@ export default Navbar;
 const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   ${(props: ThemeProps) => {
     switch (props.theme.mode) {
