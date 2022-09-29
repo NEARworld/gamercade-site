@@ -16,6 +16,11 @@ export default Menu;
 const MenuWrapper = styled.div`
 `
 const MenuList = styled.ul`
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
 `
 const MenuItem = styled.li`
 `
