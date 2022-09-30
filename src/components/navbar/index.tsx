@@ -7,6 +7,7 @@ function Navbar() {
   return <NavbarWrapper>
     <Navigation>
       <Logo />
+      <Input placeholder='search games...' />
       <Menu />
     </Navigation>
   </NavbarWrapper>
@@ -36,4 +37,15 @@ const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`; 
+`;
+const Input = styled.input`
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  font-size: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid ${props => props.theme.dark.border.primary};
+  outline: none;
+  color: ${props => props.theme.dark.text.secondary};
+`
