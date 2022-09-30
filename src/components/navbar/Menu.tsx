@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const menuList = ["Official site", "Learn", "Community"]
+const menuList = ["Learn", "Community"]
 
 function Menu() {
   return <MenuWrapper>
