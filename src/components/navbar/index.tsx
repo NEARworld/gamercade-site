@@ -5,16 +5,16 @@ import type { ThemeProps } from "styles/types";
 
 function Navbar() {
   return <NavbarWrapper>
-    <Logo />
-    <Menu />
+    <Navigation>
+      <Logo />
+      <Menu />
+    </Navigation>
   </NavbarWrapper>
 }
 export default Navbar;
 
-const NavbarWrapper = styled.nav`
+const NavbarWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px;
   ${(props: ThemeProps) => {
     switch (props.theme.mode) {
@@ -29,4 +29,11 @@ const NavbarWrapper = styled.nav`
         `
     }
   }}
-`
+`;
+const Navigation = styled.nav`
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`; 
