@@ -32,6 +32,7 @@ const NavbarWrapper = styled.div`
   }}
 `;
 const Navigation = styled.nav`
+  position: relative;
   width: 1000px;
   margin: auto;
   display: flex;
@@ -39,6 +40,8 @@ const Navigation = styled.nav`
   align-items: center;
 `;
 const Input = styled.input`
+  position: absolute;
+  transform: translateX(50%);
   margin: auto;
   padding: 10px;
   width: 50%;
