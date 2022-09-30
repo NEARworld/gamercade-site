@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const menuList = ["What is Gamercade?", "FAQ", "Downloads", "Learn", "Community", "Blog"]
+const menuList = ["Official site", "Learn", "Community", "Blog"]
 
 function Menu() {
   return <MenuWrapper>
