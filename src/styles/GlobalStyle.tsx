@@ -8,8 +8,12 @@ export const theme = {
       secondary: '#161b22'
     },
     text: {
-      primary: 'rgba(255,255,255,0.7)',
-      secondary: ''
+      primary: '#ffffffe4',
+      secondary: 'rgba(255,255,255,0.7)'
+    },
+    border: {
+      primary: '#ffffff40',
+      secondary: 'rgba(255,255,255,0.7)'
     }
   },
   light: {
@@ -28,10 +32,13 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
   }
-
+  html {
+  }
   body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
+    background-color: ${theme.dark.bg.secondary};
+    color: ${theme.dark.text.primary}
   }
 `
 export default GlobalStyle;
