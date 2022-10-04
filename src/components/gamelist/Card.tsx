@@ -1,6 +1,6 @@
-import { labels } from "pages/main";
 import styled from "styled-components";
 import Label from 'components/Label';
+import { labels } from "mocks/labels";
 
 interface Images {
   main: string;
