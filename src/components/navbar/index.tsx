@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import Logo from "components/navbar/Logo";
 import Menu from "components/navbar/Menu";
 import type { ThemeProps } from "styles/types";
+import devices from "styles/device";
 
 function Navbar() {
   return <NavbarWrapper>
@@ -38,17 +39,35 @@ const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media ${devices.mobileS} {
+    gap: 20px;
+  }
+  @media ${devices.tablet} {
+    gap: 0;
+  }
 `;
 const Input = styled.input`
-  position: absolute;
-  transform: translateX(50%);
-  margin: auto;
   padding: 10px;
-  width: 50%;
   font-size: 15px;
   background-color: transparent;
   border-radius: 10px;
   border: 1px solid ${props => props.theme.dark.border.primary};
   outline: none;
   color: ${props => props.theme.dark.text.secondary};
+
+  @media ${devices.mobileS} {
+    flex-grow: 1;
+  }
+  @media ${devices.mobileL} {
+    flex-grow: inherit;
+    width: 80%;
+  }
+
+  @media ${devices.tablet} {
+    position: absolute;
+    transform: translateX(50%);
+    margin: auto;
+    width: 50%;
+  }
 `

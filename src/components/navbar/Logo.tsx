@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import devices from "styles/device";
 
 function Logo() {
   return <LogoWrapper>
@@ -18,4 +19,10 @@ const LogoImage = styled.img`
 `
 const LogoTitle = styled.h1`
   margin: 0;
+  @media ${devices.mobileS} {
+    display: none;
+  }
+  @media ${devices.tablet} {
+    display: block;
+  }
 `
