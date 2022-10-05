@@ -17,7 +17,7 @@ function SideMenu({isSideOpen, setIsSideOpen}: Props) {
         </CloseIconWrapper>
         <MenuList>
             {menuList.map((item) => (
-                <MenuItem>{item}</MenuItem>
+                <MenuItem key={item.id}>{item.name}</MenuItem>
             ))}
         </MenuList>
     </Wrapper>

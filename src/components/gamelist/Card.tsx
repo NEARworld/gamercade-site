@@ -17,7 +17,7 @@ interface Props {
 
 function getLabel(label: string | undefined) {
   const data = labels.filter((item) => item.text === label)[0];
-  return <Label bg={data.bg} stroke={data.stroke} text={data.text} />
+  return <Label key={data.id} bg={data.bg} stroke={data.stroke} text={data.text} />
 }
 
 function Card({ name, description, labels, devs, images }: Props) {
