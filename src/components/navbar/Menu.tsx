@@ -2,7 +2,10 @@ import HamburgerIcon from "components/icons/Hamburger";
 import styled from "styled-components";
 import devices from "styles/device";
 
-export const menuList = ["Learn", "Community"]
+export const menuList = [
+  {id: 1, name: "Learn"}, 
+  {id: 2, name: "Community"}
+]
 
 interface Props {
   setIsSideOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,7 +15,7 @@ function Menu({setIsSideOpen}: Props) {
   return <MenuWrapper>
     <MenuList>
       {menuList.map((item) => (
-        <MenuItem>{item}</MenuItem>
+        <MenuItem key={item.id}>{item.name}</MenuItem>
       ))}
     </MenuList>
     <HamburgerWrapper onClick={() => setIsSideOpen(true)}>
