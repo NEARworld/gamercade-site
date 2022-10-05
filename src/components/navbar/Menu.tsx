@@ -1,17 +1,21 @@
-import HamburgerIcon from "components/icons/hamburger";
+import HamburgerIcon from "components/icons/Hamburger";
 import styled from "styled-components";
 import devices from "styles/device";
 
-const menuList = ["Learn", "Community"]
+export const menuList = ["Learn", "Community"]
 
-function Menu() {
+interface Props {
+  setIsSideOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Menu({setIsSideOpen}: Props) {
   return <MenuWrapper>
     <MenuList>
       {menuList.map((item) => (
         <MenuItem>{item}</MenuItem>
       ))}
     </MenuList>
-    <HamburgerWrapper>
+    <HamburgerWrapper onClick={() => setIsSideOpen(true)}>
       <HamburgerIcon />
     </HamburgerWrapper>
   </MenuWrapper>
@@ -19,8 +23,12 @@ function Menu() {
 
 export default Menu;
 const MenuWrapper = styled.div`
+  @media ${devices.mobileS} {
+    position: relative;
+  }
   @media ${devices.tablet} {
     margin-right: 20px;
+    position: static;
   }
 `
 const MenuList = styled.ul`

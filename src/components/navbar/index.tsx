@@ -4,12 +4,16 @@ import Menu from "components/navbar/Menu";
 import type { ThemeProps } from "styles/types";
 import devices from "styles/device";
 
-function Navbar() {
+interface Props {
+  setIsSideOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Navbar({setIsSideOpen}: Props) {
   return <NavbarWrapper>
     <Navigation>
       <Logo />
       <Input placeholder='search games...' />
-      <Menu />
+      <Menu setIsSideOpen={setIsSideOpen} />
     </Navigation>
   </NavbarWrapper>
 }
