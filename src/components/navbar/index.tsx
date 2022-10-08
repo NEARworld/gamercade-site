@@ -38,17 +38,20 @@ const NavbarWrapper = styled.div`
 `;
 const Navigation = styled.nav`
   position: relative;
-  width: 1000px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media ${devices.mobileS} {
+    width: 100%;
     gap: 20px;
   }
   @media ${devices.tablet} {
     gap: 0;
+  }
+  @media ${devices.laptop} {
+    width: 1000px;
   }
 `;
 const Input = styled.input`

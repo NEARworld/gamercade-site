@@ -1,5 +1,6 @@
 import { cards } from "mocks/cards";
 import styled from "styled-components";
+import devices from "styles/device";
 import Card from "./Card";
 
 function GameList() {
@@ -12,7 +13,21 @@ export default GameList;
 
 const GameListWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 30px;
+  gap: 10px;
   margin-top: 50px;
+  @media ${devices.mobileS} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media ${devices.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${devices.laptop} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media ${devices.laptopL} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 1855px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 `
