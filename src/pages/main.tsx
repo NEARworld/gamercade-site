@@ -23,6 +23,8 @@ function Main() {
 export default Main;
 
 const MainWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto;
   `;
 const LabelWrapper = styled.div`
   /* background-color: red; */
