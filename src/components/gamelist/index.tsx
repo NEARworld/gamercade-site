@@ -12,7 +12,7 @@ export default GameList;
 
 const GameListWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
   margin-top: 50px;
 `

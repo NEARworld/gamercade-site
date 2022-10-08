@@ -23,7 +23,7 @@ function Main() {
 export default Main;
 
 const MainWrapper = styled.div`
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   `;
 const LabelWrapper = styled.div`
