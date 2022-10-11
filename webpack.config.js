@@ -20,7 +20,8 @@ module.exports = {
       pages: path.resolve(__dirname, "src/pages/"),
       components: path.resolve(__dirname, "src/components"),
       styles: path.resolve(__dirname, "src/styles"),
-      mocks: path.resolve(__dirname, "src/mocks")
+      mocks: path.resolve(__dirname, "src/mocks"),
+      hooks: path.resolve(__dirname, "src/hooks")
     },
   },
   module: {

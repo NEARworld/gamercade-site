@@ -15,7 +15,7 @@ function Main() {
   return <MainWrapper>
     <LabelWrapper>
       {
-        labels.map((item) => <Label key={item.id} bg={item.bg} stroke={item.stroke} text={item.text} />)
+        labels.map((item) => <Label key={item.id} data={item} />)
       }
     </LabelWrapper>
     <GameList />

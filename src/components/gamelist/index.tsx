@@ -2,11 +2,18 @@ import { cards } from "mocks/cards";
 import styled from "styled-components";
 import devices from "styles/device";
 import Card from "./Card";
+import ModalPortal from "components/modal/Portal";
+import Modal from "components/modal";
+import useModal from 'hooks/useModal';
 
 function GameList() {
-    return <GameListWrapper>
-    {cards.map((item) => <Card key={item.id} name={item.name} images={item.images} labels={item.tags} />)}
-    {Array.from({ length: 30 }).map(() => <Card name={''} images={{ main: '', sub: [''] }} />)}
+  const {modalStatus, toggle} = useModal();
+  return <GameListWrapper>
+    {cards.map((item) => <Card key={item.id} card={item} toggle={toggle} />)}
+    {/* {Array.from({ length: 30 }).map(() => <Card name={''} images={{ main: '', sub: [''] }} />)} */}
+    <ModalPortal toggle={toggle} modalStatus={modalStatus}>
+      {modalStatus.isOpen ? <Modal {...{modalStatus}} /> : ''}
+    </ModalPortal>
   </GameListWrapper>
 }
 export default GameList;

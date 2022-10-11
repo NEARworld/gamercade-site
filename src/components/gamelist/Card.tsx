@@ -1,35 +1,41 @@
 import styled from "styled-components";
 import Label from 'components/Label';
 import { labels } from "mocks/labels";
-
+import { toggleType } from "hooks/useModal";
 interface Images {
   main: string;
   sub?: string[];
 }
-
-interface Props {
+interface ICard {
+  id: number;
   name?: string;
   description?: string;
   labels?: string[];
   devs?: string[];
   images: Images;
+  tags: string[]
+}
+
+interface Props {
+  card: ICard;
+  toggle: toggleType;
 }
 
 function getLabel(label: string | undefined) {
   const data = labels.filter((item) => item.text === label)[0];
-  return <Label key={data.id} bg={data.bg} stroke={data.stroke} text={data.text} />
+  return <Label key={data.id} data={data} />
 }
 
-function Card({ name, description, labels, devs, images }: Props) {
-  return <Wrapper>
-    <Image main={images.main} />
-    <Footer>
-      <Title>{name}</Title>
-      <LabelWrapper>
-        {labels?.map((item) => getLabel(item))}
-      </LabelWrapper>
-    </Footer>
-  </Wrapper>
+function Card({ card, toggle }: Props) {
+  return <Wrapper onMouseDown={() => toggle(card.id)}>
+      <Image main={card.images.main} />
+        <Footer>
+          <Title>{card.name}</Title>
+          <LabelWrapper>
+            {card.tags?.map((item) => getLabel(item))}
+          </LabelWrapper>
+        </Footer>
+    </Wrapper>
 }
 
 export default Card;
