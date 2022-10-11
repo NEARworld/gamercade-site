@@ -11,7 +11,8 @@
       "pages/*": ["pages/*"],
       "components/*": ["components/*"],
       "styles/*": ["styles/*"],
-      "mocks/*": ["mocks/*"]
+      "mocks/*": ["mocks/*"],
+      "hooks/*": ["hooks/*"]
     }
   },
   "include": ["src"],
