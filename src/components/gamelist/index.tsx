@@ -11,7 +11,7 @@ function GameList() {
   return <GameListWrapper>
     {cards.map((item) => <Card key={item.id} card={item} toggle={toggle} />)}
     <ModalPortal toggle={toggle} modalStatus={modalStatus}>
-      {modalStatus.isOpen ? <Modal {...{modalStatus}} /> : ''}
+      {modalStatus.isOpen ? <Modal modalStatus={modalStatus} /> : ''}
     </ModalPortal>
   </GameListWrapper>
 }
