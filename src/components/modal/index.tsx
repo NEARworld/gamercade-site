@@ -1,5 +1,6 @@
 import { modalStatusType } from "hooks/useModal";
 import { cards } from "mocks/cards";
+import { useEffect, useState } from "react";
 import styled from "styled-components"
 
 interface Props {
@@ -7,9 +8,23 @@ interface Props {
 }
 
 function Modal({modalStatus}: Props) {
+  const [topDistance, setTopDistance] = useState(window.scrollY);
+  function handleScroll() {
+    setTopDistance(window.scrollY);
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
   const card = cards.find((item) => item.id === modalStatus.id)
   return  <Wrapper>
-    <ModalBody onMouseDown={(e) => e.nativeEvent.stopImmediatePropagation()}>
+    <ModalBody onMouseDown={(e) => {
+      e.nativeEvent.stopImmediatePropagation()}
+    }
+      topDistance={topDistance}
+    >
       {card ? 
         <Title>{card.name}</Title> 
         
@@ -23,13 +38,12 @@ const Wrapper = styled.div`
   position: relative;
   height: 100%;
   `
-const ModalBody = styled.div`
+const ModalBody = styled.div<{topDistance: number}>`
   position: absolute;
   margin: 0 auto;
-  transform: translateY(-50%);
-  right: 0;
+  transform: translateY(calc(${props => props.topDistance+'px'} + 50%));
   left: 0;
-  top: 50vh;
+  right: 0;
   width: 500px;
   aspect-ratio: 1;
   text-align: center;
