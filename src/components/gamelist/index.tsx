@@ -10,7 +10,6 @@ function GameList() {
   const {modalStatus, toggle} = useModal();
   return <GameListWrapper>
     {cards.map((item) => <Card key={item.id} card={item} toggle={toggle} />)}
-    {/* {Array.from({ length: 30 }).map(() => <Card name={''} images={{ main: '', sub: [''] }} />)} */}
     <ModalPortal toggle={toggle} modalStatus={modalStatus}>
       {modalStatus.isOpen ? <Modal {...{modalStatus}} /> : ''}
     </ModalPortal>

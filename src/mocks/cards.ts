@@ -19,5 +19,214 @@ export const cards = [
         main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
         sub: []
       }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
+    },
+    {
+      id: 2,
+      name: 'Fantasy Saga',
+      description: 'The Magic',
+      tags: ['fantasy'],
+      developers: ['Joe'],
+      images: {
+        main: 'https://i.pinimg.com/originals/59/80/c2/5980c2f21b19972ca2346a9037f66493.png',
+        sub: []
+      }
     }
   ]
