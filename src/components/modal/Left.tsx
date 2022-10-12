@@ -37,11 +37,21 @@ const Main = styled.div`
   border: 1px solid #1E1E1E;
 `
 const Image = styled.div<{preview: string}>`
-  min-width: 500px;
-  min-height: 500px;
   background-image: url(${props => props.preview});
   background-position: bottom;
   background-size: cover;
+  @media ${devices.mobileS} {
+    min-width: 300px;
+    min-height: 300px;
+  }
+  @media ${devices.tablet} {
+    min-width: 400px;
+    min-height: 400px;
+  }
+  @media ${devices.laptopL} {
+    min-width: 500px;
+    min-height: 500px;
+  }
 `
 const Sub = styled.div`
   height: 30%;
