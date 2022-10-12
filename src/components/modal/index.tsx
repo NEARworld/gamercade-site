@@ -41,7 +41,7 @@ const ModalBody = styled.div`
   border-radius: 10px;
   display: grid;
   @media ${devices.mobileS} {
-    padding: 20px 5px;    
+    padding: 30px 15px;    
   }
   @media ${devices.mobileL} {
     padding: 30px;
