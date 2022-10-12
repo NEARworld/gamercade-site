@@ -7,7 +7,7 @@ export const cards = [
       developers: ['Ian', 'Joe', 'Jack', 'Smith'],
       images: {
         main: 'https://i.pinimg.com/originals/9d/80/aa/9d80aafb807665611800cf6182a90790.jpg',
-        sub: []
+        sub: ['https://i.pinimg.com/originals/9d/80/aa/9d80aafb807665611800cf6182a90790.jpg']
       }
     }, {
       id: 2,
