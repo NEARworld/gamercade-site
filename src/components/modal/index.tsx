@@ -2,6 +2,7 @@ import { modalStatusType } from "hooks/useModal";
 import { cards } from "mocks/cards";
 import { useEffect, useState } from "react";
 import styled from "styled-components"
+import devices from "styles/device";
 import Left from "./Left";
 import Right from "./Right";
 
@@ -17,7 +18,7 @@ function Modal({modalStatus}: Props) {
         e.nativeEvent.stopImmediatePropagation()}
       }>
           <Left images={card.images} />
-          <Right />
+          <Right name={card.name} />
       </ModalBody>
       : null}
   </Wrapper>
@@ -40,8 +41,9 @@ const ModalBody = styled.div`
   border: 1px solid ${props => props.theme.dark.border.primary};
   border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   padding: 30px;
-`
-const Title = styled.h4`
+  
+  @media ${devices.laptop} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
