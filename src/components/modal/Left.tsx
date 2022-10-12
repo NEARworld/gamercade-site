@@ -1,17 +1,22 @@
+import { useState } from "react";
 import styled from "styled-components"
 import Carousel from "./Carousel";
 
 interface Props {
-  images: {main: string, sub: string[]}
+  images: string[];
 }
 
+export type PreviewType = React.Dispatch<React.SetStateAction<string>>;
+
+
 function Left({images}: Props) {
+  const [preview, setPreview] = useState(images[0]);
   return <Wrapper>
     <Main>
-      <Image main={images.main} />
+      <Image {...{preview}} />
     </Main>
     <Sub>
-      <Carousel sub={images.sub} />
+      <Carousel {...{images, preview, setPreview}} />
     </Sub>
   </Wrapper>
 }
@@ -30,10 +35,10 @@ const Main = styled.div`
   border-radius: 10px;
   border: 1px solid #1E1E1E;
 `
-const Image = styled.div<{main: string}>`
+const Image = styled.div<{preview: string}>`
   min-width: 500px;
   min-height: 500px;
-  background-image: url(${props => props.main});
+  background-image: url(${props => props.preview});
   background-position: bottom;
   background-size: cover;
 `

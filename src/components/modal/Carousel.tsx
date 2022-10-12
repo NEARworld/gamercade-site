@@ -1,20 +1,24 @@
 import Arrow from "components/icons/Arrow";
 import useCarousel from "hooks/useCarousel";
 import styled from "styled-components";
+import { type PreviewType } from "./Left";
 
 interface Props {
-  sub: string[];
+  images: string[];
+  preview: string;
+  setPreview: PreviewType;
 }
 
-function Carousel({sub}: Props) {
-  const { handleSlide } = useCarousel({length: sub.length});
+function Carousel({images, preview, setPreview}: Props) {
+  const { handleSlide } = useCarousel({length: images.length});
   return <Wrapper>
     <Arrow direction='left' handler={handleSlide}/>
     <Slide>
       <ImageArray id='image-array'>
-        {sub.map((item) => (
-          <Item image={item}></Item>
+        {images.map((item) => (
+          <Item image={item} {...{preview}} onMouseDown={() => setPreview(item)}></Item>
         ))}
+        {images.length < 5 ? Array.from({length: 5 - images.length}).map(() => <Item image='' preview='#' />) : null}
       </ImageArray>
     </Slide>
     <Arrow direction='right' handler={handleSlide} />
@@ -42,15 +46,16 @@ const ImageArray = styled.div`
   left: 0px;
   transition: all .3s ease;
 `
-const Item = styled.div<{image: string}>`
+const Item = styled.div<{image: string, preview: string}>`
   background-image: url(${props => props.image});
-  background-color: black;
+  background-color: #00000039;
   background-size: cover;
   width: 90px;
   aspect-ratio: 1;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: ${props => props.image === '' ? 'default' : 'pointer'};
+  opacity: ${props => props.image === props.preview ? .5 : 1};
   &:hover {
-    opacity: .8;
+    opacity: .5;
   }
 `

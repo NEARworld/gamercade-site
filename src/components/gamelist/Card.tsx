@@ -2,10 +2,7 @@ import styled from "styled-components";
 import Label from 'components/Label';
 import { labels } from "mocks/labels";
 import { toggleType } from "hooks/useModal";
-interface Images {
-  main: string;
-  sub?: string[];
-}
+type Images = string[];
 interface ICard {
   id: number;
   name?: string;
@@ -28,7 +25,7 @@ function getLabel(label: string | undefined) {
 
 function Card({ card, toggle }: Props) {
   return <Wrapper onMouseDown={() => toggle(card.id)}>
-      <Image main={card.images.main} />
+      <Image main={card.images[0]} />
         <Footer>
           <Title>{card.name}</Title>
           <LabelWrapper>
