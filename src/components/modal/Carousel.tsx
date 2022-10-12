@@ -14,10 +14,10 @@ function Carousel({images, preview, setPreview}: Props) {
   const { handleSlide } = useCarousel({length: images.length});
   return <Wrapper>
     <Arrow direction='left' handler={handleSlide}/>
-    <Slide>
+    <Slide id='slide'>
       <ImageArray id='image-array'>
         {images.map((item) => (
-          <Item image={item} {...{preview}} onMouseDown={() => setPreview(item)}></Item>
+          <Item className='carousel-thumbnail' image={item} {...{preview}} onMouseDown={() => setPreview(item)}></Item>
         ))}
         {images.length < 5 ? Array.from({length: 5 - images.length}).map(() => <Item image='' preview='#' />) : null}
       </ImageArray>
