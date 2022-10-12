@@ -1,6 +1,7 @@
 import Arrow from "components/icons/Arrow";
 import useCarousel from "hooks/useCarousel";
 import styled from "styled-components";
+import devices from "styles/device";
 import { type PreviewType } from "./Left";
 
 interface Props {
@@ -30,16 +31,16 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 `
 const Slide = styled.div.attrs({className: 'slide'})`
   position: relative;
   overflow: hidden;
+  width: 100%;
   height: 90px;
-  width: 470px;
 `
 const ImageArray = styled.div`
-  width: 470px;
-  height: 90px;
+  height: 100%;
   position: absolute;
   display: flex;
   gap: 10px;
@@ -50,9 +51,9 @@ const Item = styled.div<{image: string, preview: string}>`
   background-image: url(${props => props.image});
   background-color: #00000039;
   background-size: cover;
-  width: 90px;
-  aspect-ratio: 1;
   border-radius: 5px;
+  width: 90px;
+  height: 90px;
   cursor: ${props => props.image === '' ? 'default' : 'pointer'};
   opacity: ${props => props.image === props.preview ? .5 : 1};
   &:hover {
