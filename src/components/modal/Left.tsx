@@ -44,6 +44,10 @@ const Image = styled.div<{preview: string}>`
     min-width: 300px;
     min-height: 300px;
   }
+  @media ${devices.mobileL} {
+    min-width: 300px;
+    min-height: 300px;
+  }
   @media ${devices.tablet} {
     min-width: 400px;
     min-height: 400px;

@@ -34,15 +34,18 @@ const Wrapper = styled.div`
   align-items: center;
 `
 const ModalBody = styled.div`
-  max-width: 80%;
   text-align: center;
   background-color: ${props => props.theme.dark.bg.primary};
   color: white;
   border: 1px solid ${props => props.theme.dark.border.primary};
   border-radius: 10px;
   display: grid;
-  padding: 30px;
-  
+  @media ${devices.mobileS} {
+    padding: 20px 5px;    
+  }
+  @media ${devices.mobileL} {
+    padding: 30px;
+  }
   @media ${devices.laptop} {
     grid-template-columns: repeat(2, 1fr);
   }
