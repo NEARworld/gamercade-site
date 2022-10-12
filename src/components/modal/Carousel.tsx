@@ -49,4 +49,8 @@ const Item = styled.div<{image: string}>`
   width: 90px;
   aspect-ratio: 1;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    opacity: .8;
+  }
 `
