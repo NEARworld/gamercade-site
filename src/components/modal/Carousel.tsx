@@ -15,6 +15,7 @@ function Carousel({sub}: Props) {
         {sub.map((item) => (
           <Item image={item}></Item>
         ))}
+        {sub.length < 5 ? Array.from({length: 5 - sub.length}).map(() => <Item image='' />) : null}
       </ImageArray>
     </Slide>
     <Arrow direction='right' handler={handleSlide} />
@@ -44,12 +45,12 @@ const ImageArray = styled.div`
 `
 const Item = styled.div<{image: string}>`
   background-image: url(${props => props.image});
-  background-color: black;
+  background-color: #00000039;
   background-size: cover;
   width: 90px;
   aspect-ratio: 1;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: ${props => props.image === '' ? 'default' : 'pointer'};
   &:hover {
     opacity: .8;
   }
