@@ -18,7 +18,7 @@ function Modal({modalStatus}: Props) {
         e.nativeEvent.stopImmediatePropagation()}
       }>
           <Left images={card.images} />
-          <Right name={card.name} />
+          <Right {...{card}} />
       </ModalBody>
       : null}
   </Wrapper>
@@ -40,6 +40,7 @@ const ModalBody = styled.div`
   border: 1px solid ${props => props.theme.dark.border.primary};
   border-radius: 10px;
   display: grid;
+  gap: 50px;
   @media ${devices.mobileS} {
     padding: 30px 15px;    
   }
