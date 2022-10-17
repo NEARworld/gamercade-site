@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import Logo from "components/navbar/Logo";
 import Menu from "components/navbar/Menu";
 import type { ThemeProps } from "styles/types";
-import devices from "styles/device";
+import { devices } from "styles/global";
 
 interface Props {
   setIsSideOpen: React.Dispatch<React.SetStateAction<boolean>>;

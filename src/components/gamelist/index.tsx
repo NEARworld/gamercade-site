@@ -1,6 +1,6 @@
 import { cards } from "mocks/cards";
 import styled from "styled-components";
-import devices from "styles/device";
+import { devices } from "styles/global";
 import Card from "./Card";
 import ModalPortal from "components/modal/Portal";
 import Modal from "components/modal";

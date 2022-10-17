@@ -1,7 +1,6 @@
 import Arrow from "components/icons/Arrow";
 import useCarousel from "hooks/useCarousel";
 import styled from "styled-components";
-import devices from "styles/device";
 import { type PreviewType } from "./Left";
 
 interface Props {

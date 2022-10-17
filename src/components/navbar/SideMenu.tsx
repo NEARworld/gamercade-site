@@ -1,6 +1,6 @@
 import CloseIcon from "components/icons/CloseIcon";
 import styled from "styled-components";
-import devices from "styles/device";
+import { devices } from "styles/global";
 import { menuList } from "./Menu";
 
 interface Props {
