@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Logo from "components/navbar/Logo";
 import Menu from "components/navbar/Menu";
-import type { ThemeProps } from "styles/types";
+import type { ThemeProps } from "types/theme";
 import { devices } from "styles/global";
 
 interface Props {
