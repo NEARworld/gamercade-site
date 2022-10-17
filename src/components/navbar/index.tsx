@@ -8,14 +8,16 @@ interface Props {
   setIsSideOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Navbar({setIsSideOpen}: Props) {
-  return <NavbarWrapper>
-    <Navigation>
-      <Logo />
-      <Input placeholder='search games...' />
-      <Menu setIsSideOpen={setIsSideOpen} />
-    </Navigation>
-  </NavbarWrapper>
+function Navbar({ setIsSideOpen }: Props) {
+  return (
+    <NavbarWrapper>
+      <Navigation>
+        <Logo />
+        <Input placeholder="search games..." />
+        <Menu setIsSideOpen={setIsSideOpen} />
+      </Navigation>
+    </NavbarWrapper>
+  );
 }
 export default Navbar;
 
@@ -24,15 +26,15 @@ const NavbarWrapper = styled.div`
   padding: 10px;
   ${(props: ThemeProps) => {
     switch (props.theme.mode) {
-      case 'dark':
+      case "dark":
         return css`
           background-color: ${props.theme.dark.bg.primary};
           color: ${props.theme.dark.text.primary};
-        `
-      case 'light':
+        `;
+      case "light":
         return css`
           background-color: ${props.theme.light.bg.primary};
-        `
+        `;
     }
   }}
 `;
@@ -59,9 +61,9 @@ const Input = styled.input`
   font-size: 15px;
   background-color: transparent;
   border-radius: 10px;
-  border: 1px solid ${props => props.theme.dark.border.primary};
+  border: 1px solid ${(props) => props.theme.dark.border.primary};
   outline: none;
-  color: ${props => props.theme.dark.text.secondary};
+  color: ${(props) => props.theme.dark.text.secondary};
 
   @media ${devices.mobileS} {
     flex-grow: 1;
@@ -77,4 +79,4 @@ const Input = styled.input`
     margin: auto;
     width: 50%;
   }
-`
+`;
