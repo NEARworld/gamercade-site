@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components"
-import devices from "styles/device";
+import { devices } from "styles/global";
 import Carousel from "./Carousel";
 
 interface Props {

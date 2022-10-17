@@ -1,32 +1,51 @@
 import { createGlobalStyle } from "styled-components";
 
+const sizes = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+export const devices = {
+  mobileS: `(min-width: ${sizes.mobileS})`,
+  mobileM: `(min-width: ${sizes.mobileM})`,
+  mobileL: `(min-width: ${sizes.mobileL})`,
+  tablet: `(min-width: ${sizes.tablet})`,
+  laptop: `(min-width: ${sizes.laptop})`,
+  laptopL: `(min-width: ${sizes.laptopL})`,
+  desktop: `(min-width: ${sizes.desktop})`,
+};
+
 export const theme = {
-  mode: 'dark',
+  mode: "dark",
   dark: {
     bg: {
-      primary: '#0d1117',
-      secondary: '#161b22'
+      primary: "#0d1117",
+      secondary: "#161b22",
     },
     text: {
-      primary: '#ffffffe4',
-      secondary: 'rgba(255,255,255,0.7)'
+      primary: "#ffffffe4",
+      secondary: "rgba(255,255,255,0.7)",
     },
     border: {
-      primary: '#ffffff40',
-      secondary: 'rgba(255,255,255,0.7)'
-    }
+      primary: "#ffffff40",
+      secondary: "rgba(255,255,255,0.7)",
+    },
   },
   light: {
     bg: {
-      primary: '#0d1117',
-      secondary: '#161b22'
+      primary: "#0d1117",
+      secondary: "#161b22",
     },
     text: {
-      primary: '',
-      secondary: ''
-    }
-  }
-}
+      primary: "",
+      secondary: "",
+    },
+  },
+};
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -51,5 +70,5 @@ const GlobalStyle = createGlobalStyle`
     background-color: #00000075;
     min-height: 100vh;
   }
-`
+`;
 export default GlobalStyle;

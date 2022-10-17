@@ -1,6 +1,6 @@
 import HamburgerIcon from "components/icons/Hamburger";
 import styled from "styled-components";
-import devices from "styles/device";
+import { devices } from "styles/global";
 
 export const menuList = [
   {id: 1, name: "Learn"}, 

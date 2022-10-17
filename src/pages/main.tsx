@@ -2,7 +2,7 @@ import GameList from 'components/gamelist';
 import Label from 'components/Label';
 import { labels } from 'mocks/labels';
 import styled from 'styled-components';
-import devices from 'styles/device';
+import { devices } from "styles/global";
 
 export interface ILabel {
   id: number;
