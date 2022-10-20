@@ -1,3 +1,4 @@
+import { labels } from "mocks/labels";
 import styled from "styled-components";
 
 interface Props<T> {
@@ -6,7 +7,10 @@ interface Props<T> {
     stroke: T, 
     text?: T
   };
-};
+export function getLabel(label: string | undefined) {
+  const data = labels.filter((item) => item.text === label)[0];
+  return <Label key={data.id} data={data} />;
+}
 
 function Label({ data }: Props<string>) {
   return <StyledLabel data={data}>

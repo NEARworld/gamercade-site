@@ -1,6 +1,4 @@
-import styled from "styled-components";
-import Label from 'components/Label';
-import { labels } from "mocks/labels";
+import { getLabel } from "components/Label";
 import { toggleType } from "hooks/useModal";
 type Images = string[];
 interface ICard {
@@ -16,11 +14,6 @@ interface ICard {
 interface Props {
   card: ICard;
   toggle: toggleType;
-}
-
-function getLabel(label: string | undefined) {
-  const data = labels.filter((item) => item.text === label)[0];
-  return <Label key={data.id} data={data} />
 }
 
 function Card({ card, toggle }: Props) {
