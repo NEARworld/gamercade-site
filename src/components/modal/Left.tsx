@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "styled-components"
+import styled from "styled-components";
 import { devices } from "styles/global";
 import Carousel from "./Carousel";
 
@@ -9,22 +9,22 @@ interface Props {
 
 export type PreviewType = React.Dispatch<React.SetStateAction<string>>;
 
-
-function Left({images}: Props) {
+function Left({ images }: Props) {
   const [preview, setPreview] = useState(images[0]);
-  return <Wrapper>
-    <Main>
-      <Image {...{preview}} />
-    </Main>
-    <Sub>
-      <Carousel {...{images, preview, setPreview}} />
-    </Sub>
-  </Wrapper>
+  return (
+    <Wrapper>
+      <Main>
+        <Image {...{ preview }} />
+      </Main>
+      <Sub>
+        <Carousel {...{ images, preview, setPreview }} />
+      </Sub>
+    </Wrapper>
+  );
 }
 export default Left;
 
-const Wrapper = styled.div`
-`
+const Wrapper = styled.div``;
 const Main = styled.div`
   width: 95%;
   height: 70%;
@@ -34,10 +34,10 @@ const Main = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 1px solid #1E1E1E;
-`
-const Image = styled.div<{preview: string}>`
-  background-image: url(${props => props.preview});
+  border: 1px solid #1e1e1e;
+`;
+const Image = styled.div<{ preview: string }>`
+  background-image: url(${(props) => props.preview});
   background-position: bottom;
   background-size: cover;
   @media ${devices.mobileS} {
@@ -52,7 +52,7 @@ const Image = styled.div<{preview: string}>`
     min-width: 500px;
     min-height: 500px;
   }
-`
+`;
 const Sub = styled.div`
   height: 30%;
-`
+`;
