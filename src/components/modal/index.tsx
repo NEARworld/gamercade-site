@@ -1,27 +1,30 @@
 import { modalStatusType } from "hooks/useModal";
 import { cards } from "mocks/cards";
-import { useEffect, useState } from "react";
-import styled from "styled-components"
-import devices from "styles/device";
+import styled from "styled-components";
+import { devices } from "styles/global";
 import Left from "./Left";
 import Right from "./Right";
 
 interface Props {
-  modalStatus: modalStatusType; 
+  modalStatus: modalStatusType;
 }
 
-function Modal({modalStatus}: Props) {
-  const card = cards.find((item) => item.id === modalStatus.id)
-  return  <Wrapper>
-    {card ? 
-      <ModalBody onMouseDown={(e) => {
-        e.nativeEvent.stopImmediatePropagation()}
-      }>
+function Modal({ modalStatus }: Props) {
+  const card = cards.find((item) => item.id === modalStatus.id);
+  return (
+    <Wrapper>
+      {card ? (
+        <ModalBody
+          onMouseDown={(e) => {
+            e.nativeEvent.stopImmediatePropagation();
+          }}
+        >
           <Left images={card.images} />
-          <Right {...{card}} />
-      </ModalBody>
-      : null}
-  </Wrapper>
+          <Right {...{ card }} />
+        </ModalBody>
+      ) : null}
+    </Wrapper>
+  );
 }
 
 export default Modal;
@@ -32,17 +35,17 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 const ModalBody = styled.div`
   text-align: center;
-  background-color: ${props => props.theme.dark.bg.primary};
+  background-color: ${(props) => props.theme.dark.bg.primary};
   color: white;
-  border: 1px solid ${props => props.theme.dark.border.primary};
+  border: 1px solid ${(props) => props.theme.dark.border.primary};
   border-radius: 10px;
   display: grid;
   gap: 50px;
   @media ${devices.mobileS} {
-    padding: 30px 15px;    
+    padding: 30px 15px;
   }
   @media ${devices.mobileL} {
     padding: 30px;
@@ -50,4 +53,4 @@ const ModalBody = styled.div`
   @media ${devices.laptop} {
     grid-template-columns: repeat(2, 1fr);
   }
-`
+`;
